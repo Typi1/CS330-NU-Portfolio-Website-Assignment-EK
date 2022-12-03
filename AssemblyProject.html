@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assembly Game Project</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <script src="SetupCode.js"></script>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a id="nameplate" href="Landing.html" tabindex="1">Ethan Kim</a>
+                </li>
+                <li>
+                    <a class="naviitem" href="AboutMe.html" tabindex="5">About Me</a>
+                </li>
+                <li class="naviitem"  tabindex="2" aria-expanded="false" onkeypress="toggleFlyout(this)"> 
+                    Projects
+                    <ul id="projects-flyout" class="flyout"> 
+                        <li>
+                            <a class="naviitem" href="CameraProject.html" tabindex="3">Lobster 3D Model and Camera Control</a>
+                        </li>
+                        <li>
+                            <a class="naviitem" href="AssemblyProject.html" tabindex="4">MASM Space Game</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="naviitem" href="Landing.html" tabindex="1">Home</a>
+                </li>
+                <li id="altlinks" aria-expanded="false" onkeypress="toggleFlyout2(this)" tabindex="2">
+                    Menu
+                    <ul id="menu-flyout" class="flyout"> 
+                        <li>
+                            <a class="naviitem" href="Landing.html" tabindex="3">Home</a>
+                        </li>
+                        <li>
+                            <a class="naviitem" href="CameraProject.html" tabindex="4">Lobster 3D Model and Camera Control</a>
+                        </li>
+                        <li>
+                            <a class="naviitem" href="AssemblyProject.html" tabindex="5">MASM Space Game</a>
+                        </li>
+                        <li>
+                            <a class="naviitem" href="AboutMe.html" tabindex="6">About Me</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <br><br><br><br><br><br><br>
+        
+        <main aria-labelledby="assemblyhdr">
+            <h1 id="assemblyhdr">Spaceship Shooter Game Made in Assembly</h1>
+            <section>
+                <div class="videoplayer-wrapper">
+                    <h3 id="vdtitle">Video Demo of Game</h3>
+                    <iframe class="videoplayer" src="https://www.youtube.com/embed/FmD2_-NXMJ8" aria-labelledby="vdtitle"></iframe>
+                </div>
+            </section> 
+
+            <section aria-labelledby="proj-descr">
+                <h3 id="proj-descr">Overview</h3>
+                <div class="proj-text-wrapper">
+                    <p>
+                        For my final project in the class "Fundamentals of Computer System Software" (COMP_ENG 205 at Northwestern University),
+                        I used the MASM assembly programming language to create a game where the player controls a spaceship 
+                        fighting a boss while dodging their attacks. In the following sections, I describe the controls, objective, 
+                        and mechanics of the game.
+                    </p>
+                </div>
+                
+            </section>
+            <section aria-labelledby="game-contr">
+                <h3 id="game-contr">Controls</h3>
+                <div class="proj-text-wrapper">
+                    <ul>
+                        <li>Rotate the spaceship with the left and right arrow keys.</li> 
+                        <li>Move forwards or backwards depending on what way the spaceship is facing with the up and down arrow keys.</li>
+                        <li>If you have a laser powerup (indicated by the hearts in the bottom right corner being blue), press spacebar to fire a powerful laser in front of the spaceship that continues to shoot while you move. 
+                            <ul><li>Note that after firing the laser, a powerup must be collected to use it again. Not having the laser usable is indicated by the hearts in the bottom right corner being red.</li></ul></li>
+                        <li>Press/hold E to shoot bullet projectiles in front of the spaceship.</li>
+                        <li>Press Q to pause/unpause the game.</li>
+                        <li>Press P while the player's laser is being fired to see the hitboxes used to calculate collision with it.</li>
+                        <br>
+                        <li>In the top-left corner, various icons will appear.
+                            <ul>
+                                <li>The most top-left icon indicates that you have been hit and you will be invincible for as long as it is displayed (not long).</li>
+                                <li>The icon below that indicates that your bullet projectiles have hit the enemy.</li>
+                                <li>The icon to the right of that indicates that your laser has hit the enemy.</li>
+                                <li>Note that these icons disappear when the conditions that make them appear become unsatisfied.</li>
+                            
+                            </ul></li>
+                        <li>When you have been hit and you health is now represented by an odd number of hearts, a powerup will appear in the top region of the screen.
+                            <ul>
+                                <li>Collect this powerup to regain a charge of the laser ability. Note that only 1 can be stored at a time.</li>
+                                <li>Additionally, powerups will not spawn during the 4th phase, though if one spawned in a previous phase and wasn't collected, it will still be there.</li>
+                            </ul></li>
+                        <li>If you game over or clear the game and want to play again, relaunch the .exe file.</li>
+                    </ul>
+                </div>
+                
+            </section>
+            <section aria-labelledby="game-obj">
+                <h3 id="game-obj">Objective</h3>
+                <div class="proj-text-wrapper">
+                    <ul>
+                        <li>Defeat the enemy in the center of the screen by damaging it by hitting it with the bullet projectiles and player's laser.</li>
+                        <li>Be mindful not to run out of health, indicated by the hearts in the bottom right corner. You can be damaged by getting hit by the enemy's laser or bullet projectiles.
+                            <ul>
+                                <li>Note that you won't get hurt by touching the enemy itself.</li>
+                                <li>Running out of health results in a game over and you must restart by relaunching the .exe file.</li>
+                            </ul></li>
+                        <li>The enemy has four phases:
+                            <ol type="1">
+                                <li>A rigid pattern of vertical and horizontal lasers appear onscreen. A brief look at where the lasers will fire will appear before the laser hitboxes are active so you can avoid them.</li>
+                                <li>The enemy will fire its bullet projectiles in 4 directions at once and slowly rotate its aim for all of them.</li>
+                                <li>The enemy does mostly the same behavior as in phase 2 but its rotation arc is wider and it rotates quicker.</li>
+                                <li>Phases 1 and 2 occur simultaneously.</li>
+                            </ol></li>
+                        <li>You can tell that a phase change has occurred by the change in attack patterns and the enemy's appearance changing.</li>
+                    </ul>
+                </div>
+                
+                <section aria-labelledby="ackn">
+                    <h3 id="ackn">Acknowledgements</h3>
+                    <div class="proj-text-wrapper">
+                        A link to download the project won't be provided as it makes use of assets I do not personally own. Here are the sources for the resources used in the game:
+                        <ul>
+                            <li>Icons in the top-left corner: Minior from Pokemon Sun and Moon</li>
+                            <li>Enemy/boss: Deoxys forms from Pokemon Diamond and Pearl</li>
+                            <li>Powerup: Comet Shard from Pokemon Black and White</li>
+                            <li>Hearts: DontMind8.blogspot.com links to the creator, source is <a href=https://opengameart.org/content/heart-pixel-art>https://opengameart.org/content/heart-pixel-art</a></li>
+                            <li>Enemy and player bullet projectiles: <a href=https://opengameart.org/content/bullet-collection-1-m484 by Master484>https://opengameart.org/content/bullet-collection-1-m484 by Master484</a></li>
+                            <li>Other sprites used in the game are original.</li>
+                            <li>I made all of the sound effects.</li>
+                        </ul>
+                    </div>
+            </section>
+        </main>
+        
+
+   </body>
+</html>

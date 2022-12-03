@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Landing Page</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <script src="SetupCode.js"></script>
+    </head>
+    <body>
+        <nav>
+            <ul role="menubar">
+                <li role="menuitem">
+                    <a id="nameplate" href="Landing.html" tabindex="1">Ethan Kim</a>
+                </li>
+                <li role="menuitem">
+                    <a class="naviitem" href="AboutMe.html" tabindex="5">About Me</a>
+                </li>
+                <li class="naviitem"  tabindex="2" aria-expanded="false" onkeypress="toggleFlyout(this)" role="menuitem"> 
+                    Projects
+                    <ul id="projects-flyout" class="flyout" role="menu"> 
+                        <li  role="menuitem">
+                            <a class="naviitem" href="CameraProject.html" tabindex="3" >Lobster 3D Model and Camera Control</a>
+                        </li>
+                        <li  role="menuitem">
+                            <a class="naviitem" href="AssemblyProject.html" tabindex="4">MASM Space Game</a>
+                        </li>
+                    </ul>
+                </li>
+                <li  role="menuitem">
+                    <a class="naviitem" href="Landing.html" tabindex="1">Home</a>
+                </li>
+                <li id="altlinks" aria-expanded="false" onkeypress="toggleFlyout2(this)" tabindex="2"  role="menuitem">
+                    Menu
+                    <ul id="menu-flyout" class="flyout" role="menu"> 
+                        <li  role="menuitem">
+                            <a class="naviitem" href="Landing.html" tabindex="3">Home</a>
+                        </li>
+                        <li  role="menuitem">
+                            <a class="naviitem" href="CameraProject.html" tabindex="4">Lobster 3D Model and Camera Control</a>
+                        </li>
+                        <li  role="menuitem">
+                            <a class="naviitem" href="AssemblyProject.html" tabindex="5">MASM Space Game</a>
+                        </li>
+                        <li  role="menuitem">
+                            <a class="naviitem" href="AboutMe.html" tabindex="6">About Me</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <br><br><br><br><br><br><br>
+        <section aria-labelledby="welcomemsg">
+            <div>
+                <h1 id="welcomemsg">Welcome to Ethan's website!</h1>
+                
+                <div class="intro-section">
+                    
+                    <div class="landing-portrait"> <img src="images/horizphoto2.jpg" alt="Picture of Ethan Kim" class="landing-portrait"> </div>
+                    <div class="welcometext">
+                        Hello, my name is Ethan Kim. I'm currently a senior undergraduate student at Northwestern University, majoring in computer science.
+                        I'm currently interested in the field of computer vision, but I'm open to and actively engage with many other fields as well.
+                        On this website you can find a few showcases of projects I've worked on during my time as a student as well as more information about me.
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section aria-labelledby="projecthdn">
+            <div class="projects-wrapper">
+                <h1 id="projecthdn">Featured Projects</h1>
+
+                <div class="ind-project-wrapper" aria-labelledby="lobsterproj">
+                    <h3 id="lobsterproj">3D Modeling and Camera Control</h3>
+                    <img src="images/lobster-preview.PNG" alt="3D Modeled Underwater Scene" id="lobster-prev-img">
+                    <div class="short-proj-descr">
+                        <p>
+                            For my introduction to computer graphics class, I created a rigged and animated 3D model of a crustacean in Javascript, 
+                            with player controls over the model and the camera in the 3D scene. &#10;
+                            If you would like to see a video of the simulation or learn more about it, follow the link below:
+                        </p>
+                    </div>
+                    <a href="CameraProject.html" class="landing-page-button">
+                        See more
+                    </a>
+                </div>
+                <div class="ind-project-wrapper" aria-labelledby="masmproj">
+                    <h3 id="masmproj">Space Game Made in Assembly</h3>
+                    <img src="images/space-game-preview.PNG" alt="Spaceship shooter game" id="spaceship-prev-img">
+                    <div class="short-proj-descr">
+                        <p>
+                            For a class focused on assembly language programming, I created a short game where the player controls a spaceship 
+                            and tries to defeat a boss. &#10;
+                            If you would like see a video of the simulation or learn more about it, follow the link below:
+                        </p>
+                    </div>
+                    <a href="AssemblyProject.html" class="landing-page-button">
+                        See more
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        
+        
+
+   </body>
+</html>
+

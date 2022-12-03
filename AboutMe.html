@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About Me</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <script src="SetupCode.js"></script>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a id="nameplate" href="Landing.html" tabindex="1">Ethan Kim</a>
+                </li>
+                <li>
+                    <a class="naviitem" href="AboutMe.html" tabindex="5">About Me</a>
+                </li>
+                <li class="naviitem"  tabindex="2" aria-expanded="false" onkeypress="toggleFlyout(this)"> 
+                    Projects
+                    <ul id="projects-flyout" class="flyout"> 
+                        <li>
+                            <a class="naviitem" href="CameraProject.html" tabindex="3">Lobster 3D Model and Camera Control</a>
+                        </li>
+                        <li>
+                            <a class="naviitem" href="AssemblyProject.html" tabindex="4">MASM Space Game</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="naviitem" href="Landing.html" tabindex="1">Home</a>
+                </li>
+                <li id="altlinks" aria-expanded="false" onkeypress="toggleFlyout2(this)" tabindex="2">
+                    Menu
+                    <ul id="menu-flyout" class="flyout"> 
+                        <li>
+                            <a class="naviitem" href="Landing.html" tabindex="3">Home</a>
+                        </li>
+                        <li>
+                            <a class="naviitem" href="CameraProject.html" tabindex="4">Lobster 3D Model and Camera Control</a>
+                        </li>
+                        <li>
+                            <a class="naviitem" href="AssemblyProject.html" tabindex="5">MASM Space Game</a>
+                        </li>
+                        <li>
+                            <a class="naviitem" href="AboutMe.html" tabindex="6">About Me</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <br><br><br><br><br><br><br>
+        
+        <main aria-labelledby="abtme">
+            
+            <h1 id="abtme">About Me</h1>
+            <section class="portrait-wrapper">
+                <div >
+                    <img src="images/portraitimg.jpg" class="portrait" alt="Photo of Ethan Kim">
+                </div>
+            </section> 
+            <div class="about-me-wrapper">
+                <section aria-labelledby="descr">
+                    <h3 id="descr">Who is Ethan?</h3>
+                    <div class="abt-text-wrapper">
+                        <p>
+                            I am currently a senior undergraduate student enrolled at Northwestern University. I am majoring in computer science. 
+                            Currently, my interests lie in the field of computer vision. I grew up in the suburbs in the Hudson River Valley in New York 
+                            with passions for engineering and creative writing. I've interned doing QA for a company before, but I'm more interested in 
+                            a software engineering position at the moment.
+                        </p>
+                    </div>
+                    
+                </section>
+                <section aria-labelledby="resumeandcont">
+                    <h3 id="resumeandcont">My Resume and How to Contact Me</h3>
+                    <div class="abt-text-wrapper">
+                        <p>
+                            If you would like to contact me, please use the email: <a href="mailto:ethankim2023@u.northwestern.edu">ethankim2023[at]u[dot]northwestern[dot]edu</a>
+                            <br>
+                            <br>
+                            If you are interested in reaching out to me regarding an employment opportunity, please refer to my resume attached below and <a href="https://www.linkedin.com/in/ethankim429/" target="_blank">my LinkedIn account here</a>.
+                        </p>
+                        <a href="Ethan Kim - Resume.pdf" download> <div class="landing-page-button">Download Resume</div> </a>
+                    </div>
+                    
+                </section>
+            </div>
+             
+        </main>
+        
+
+   </body>
+</html>

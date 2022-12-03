@@ -1,0 +1,313 @@
+/*
+    Global
+*/
+
+body {
+	font-family: Avenir, sans-serif;
+    background-color: #eeddff;
+}
+
+/* Stuff for the top nav bar menu*/
+
+
+
+nav {
+    width: 100%;
+    background-color: rebeccapurple;
+    height: 50px;
+    color: white;
+    margin-top: -20px;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 20px;
+}
+
+nav ul li ul {
+    width: 100px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li .naviitem {
+    background-color: purple;
+    width: 100%;
+    border: 1px #ee00ee solid;
+    margin-right: -46px;
+}
+
+nav ul li ul li .naviitem:hover, nav ul li ul li .naviitem:hover  {
+    background-color: #aa00aa;
+}
+
+nav ul li ul li .naviitem:hover  {
+    background-color: #dd00dd;
+}
+
+.naviitem {
+    color: white;
+    text-align: center;
+    float: right;
+    padding: 15px 45px;
+    text-decoration: none;
+    background-color: purple;
+    border: 1px #ee00ee solid;
+    width: 100px;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav .naviitem:hover, nav .naviitem:focus {
+    background-color: #aa00aa;
+}
+
+nav .naviitem:active {
+    background-color: #dd00dd;
+}
+
+#nameplate {
+    float: left;
+    text-align: center;
+    background-color: #660066;
+    padding: 15px 120px;
+    border: 1px #ee00ee solid;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+#nameplate:hover, #nameplate:focus {
+    background-color: #990066;
+}
+
+#nameplate:active {
+    background-color: #aa0088;
+}
+
+#altlinks {
+    display: none;
+    background-color: purple;
+    padding: 15px 45px;
+    border: 1px #ee00ee solid;
+    width: 60px;
+    text-align: center;
+}
+
+#altlinks:hover, #altlinks:focus {
+    background-color: #aa00aa;
+}
+
+#altlinks:active {
+    background-color: #dd00dd;
+}
+
+
+#menu-flyout li a{
+    display: block;
+    text-align: center;
+    margin-left: -45px;
+}
+
+@media screen and (max-width: 950px) {
+    nav a, nav .naviitem {
+        display: none;
+    }
+    #nameplate {
+        display: block;
+        padding: 15px 80px;
+    }
+    nav #altlinks {
+      float: right;
+      display: block;
+    }
+    
+  }
+
+  .flyout {
+    overflow: visible;
+    display: none;
+  }
+  
+
+  section {
+    width: auto;
+    margin: 30px;
+  }
+
+/*
+    Landing Page
+*/
+
+.welcometext {
+    text-align: left;
+    position: absolute;
+    line-height: 30px;
+    font-size: 20px;
+    padding: 50px;
+    background-color: #999999;
+    color: black;
+    width: 50%;
+    height: 50%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    bottom: 4px;
+    right: 0px;
+}
+
+.landing-portrait {
+    width: 100%;
+}
+
+.intro-section {
+    width: 100%;
+    position: relative;
+    min-height: 470px;
+}
+
+@media screen and (max-width: 955px) {
+    .welcometext {
+        height: 213px;
+        line-height: 25px;
+    }
+    .intro-section {
+        min-height: 220px;
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    .welcometext {
+        font-size: 15px;
+    }
+  }
+
+.projects-wrapper {
+    width: 100%;
+    height: 1500px;
+}
+
+.ind-project-wrapper {
+    width: 100%;
+    height: 540px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#lobster-prev-img {
+    margin: auto;
+    display: block;
+    width: 50%;
+    max-height: 360px;
+    max-width: 541px;
+}
+
+#spaceship-prev-img {
+    margin: auto;
+    display: block;
+    width: 50%;
+    max-height: 360px;
+    max-width: 478px;
+}
+
+.short-proj-descr {
+    margin: auto;
+    display: block;
+    width: 70%;
+}
+
+.landing-page-button {
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 100px;
+    padding: 20px;
+    background-color: #990066;
+    border: 1px #ee00ee solid;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.landing-page-button:hover, .landing-page-button:focus {
+    background-color: #aa00aa;
+}
+
+.landing-page-button:active {
+    background-color: #dd00dd;
+}
+
+/*
+    Project Pages
+*/
+
+.videoplayer-wrapper {
+    width: 100%;
+    height: 450px;
+}
+
+.videoplayer {
+    margin: auto;
+    display: block;
+    width: 60%;
+    height: 80%;
+    max-width: 716px;
+    max-height: 400px;
+}
+
+.proj-text-wrapper {
+    margin: auto;
+    display: block;
+    width: 80%;
+    text-align: left;
+    background-color: #eeccee;
+    border: 1px #dd00dd solid;
+    padding: 20px;
+    list-style: circle;
+    line-height: 25px;
+}
+
+.ital {
+    font-style: italic;
+}
+
+/*
+    Bio Page
+*/
+
+.portrait-wrapper {
+    width: 42%;
+    height: 450px;
+    float: left;
+}
+
+.portrait {
+    
+    display: block;
+    width: 100%;
+    margin: 5px #dd00dd solid;
+}
+
+.abt-text-wrapper {
+    margin: auto;
+    display: block;
+    width: 60%;
+    text-align: left;
+    background-color: #eeccee;
+    border: 1px #dd00dd solid;
+    padding: 20px;
+    list-style: circle;
+    line-height: 25px;
+}
+
+.about-me-wrapper {
+    width: 60%;
+    height: 50%;
+    float: right;
+    margin-right: -10%;
+}

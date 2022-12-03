@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>3D Model and Camera Project</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <script src="SetupCode.js"></script>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a id="nameplate" href="Landing.html" tabindex="1">Ethan Kim</a>
+                </li>
+                <li>
+                    <a class="naviitem" href="AboutMe.html" tabindex="5">About Me</a>
+                </li>
+                <li class="naviitem"  tabindex="2" aria-expanded="false" onkeypress="toggleFlyout(this)"> 
+                    Projects
+                    <ul id="projects-flyout" class="flyout"> 
+                        <li>
+                            <a class="naviitem" href="CameraProject.html" tabindex="3">Lobster 3D Model and Camera Control</a>
+                        </li>
+                        <li>
+                            <a class="naviitem" href="AssemblyProject.html" tabindex="4">MASM Space Game</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="naviitem" href="Landing.html" tabindex="1">Home</a>
+                </li>
+                <li id="altlinks" aria-expanded="false" onkeypress="toggleFlyout2(this)" tabindex="2">
+                    Menu
+                    <ul id="menu-flyout" class="flyout"> 
+                        <li>
+                            <a class="naviitem" href="Landing.html" tabindex="3">Home</a>
+                        </li>
+                        <li>
+                            <a class="naviitem" href="CameraProject.html" tabindex="4">Lobster 3D Model and Camera Control</a>
+                        </li>
+                        <li>
+                            <a class="naviitem" href="AssemblyProject.html" tabindex="5">MASM Space Game</a>
+                        </li>
+                        <li>
+                            <a class="naviitem" href="AboutMe.html" tabindex="6">About Me</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <br><br><br><br><br><br><br>
+        
+        <main aria-labelledby="camerahdr">
+            <h1 id="camerahdr">Underwater 3D Interactive Scene and Camera Controls</h1>
+            <section>
+                <div class="videoplayer-wrapper">
+                    <h3 id="vdtitle">Video Demo of Interactive Scene and Camera</h3>
+                    <iframe class="videoplayer" src="https://www.youtube.com/embed/_fP0pmNlpKA" aria-labelledby="vdtitle"></iframe>
+                </div>
+            </section> 
+
+            <section aria-labelledby="proj-descr">
+                <h3 id="proj-descr">Overview</h3>
+                <div class="proj-text-wrapper">
+                    <p>
+                        For a project in my introduction to computer graphics class (COMP_SCI 351-1 at Northwestern University),
+                        I created an animated, interactive scene modeled after life underneath the sea. I coded models for the crustacean,
+                        fish, and strange tree-like lifeforms and rigged them to move as shown in the video demo above. The viewing port on the left 
+                        side of the window is a projective view of the scene and the viewing port on the right is an orthonormal view of the scene.
+                        Both views are controlled using the camera I implemented.
+                    </p>
+                </div>
+                
+            </section>
+            <section aria-labelledby="game-contr">
+                <h3 id="game-contr">Controls</h3>
+                <div class="proj-text-wrapper">
+                    <ul>
+                        <li>The camera angle is controlled using the arrow keys, which tilt the camera in the corresponding direction.</li> 
+                        <li>The camera position is controlled using the WASD keys. The W and S keys have the camera go towards or away from its current line of sight respectively.
+                            The A and D keys have the camera strafe in the corresponding direction based on its current line of sight.
+                        </li> 
+                        <li>
+                            The spacebar key can be held to enable the crustacean's tail's movement. Letting go of the key will pause the animation.
+                        </li>
+                        <li>Holding left-click on the viewport and moving the mouse will rotate the crustacean model.</li>
+                        
+                    </ul>
+                </div>
+                
+            </section>
+                
+             <section aria-labelledby="ackn">
+                <h3 id="ackn">Acknowledgements</h3>
+                <div class="proj-text-wrapper">
+                    <p>
+                        Since the project was coded in Javascript and presented through HTML, I could embed it in this website. However, the source code includes
+                        some starter code from the class and from the textbook cited below, so I decided against publishing it publicly and instead opted for the demo video.
+                        Aside from these contributions (mainly some of the objects composing the models like the egg-shaped primitive shapes and the vertex and fragment shaders),
+                        I did all of the other models, transformations of them, arrangement of them into larger models, rigging of their animations, and coding of the camera and 
+                        other controls.
+                        <br>
+                        <span class="ital">Matsuda, K., & Lea, R. (2013). WebGL Programming Guide: Interactive 3D Graphics Programming with WebGL: Pearson Education.</span>
+                    </p> 
+                </div>
+            </section>
+        </main>
+        
+
+   </body>
+</html>
